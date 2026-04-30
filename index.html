@@ -2,37 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Fathi Mohamed | Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="hero">
-        <nav>
-        
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#work">My Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- FIXED NAV -->
+    <nav>
+        <div class="logo"><span>Fathi</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
 
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about"    onclick="closeMenu()">About</a>
+        <a href="#services" onclick="closeMenu()">Services</a>
+        <a href="#work"     onclick="closeMenu()">My Work</a>
+        <a href="#contact"  onclick="closeMenu()">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero">
         <div class="hero-content">
             <h1>Hi there, I am <span>Fathi Mohamed Bille</span></h1>
-            <p>Full Stack Developer specializing in building scalable, visually stunning, and high performance applications. With expertise in Flask, PostgreSQL, and modern Frontend tech, I deliver clean code and seamless user experiences.</p>
-            
-            <div class="footer-socials">
-                <a href="http://linkedin.com/in/fathi-mohamed-53726a312" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/FathiMohamedBille" target="_blank"><i class="fab fa-github"></i></a>
+            <p>Full Stack Developer specializing in building scalable, visually stunning, and high-performance applications. With expertise in Flask, PostgreSQL, and modern Frontend tech, I deliver clean code and seamless user experiences.</p>
+            <div class="hero-socials">
+                <a href="http://linkedin.com/in/fathi-mohamed-53726a312" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/FathiMohamedBille"           target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </div>
-
         <div class="scroll-indicator"></div>
     </header>
 
+    <!-- ABOUT -->
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="about-image">
@@ -42,14 +56,15 @@
                 <span class="sub-heading">Discover</span>
                 <h2>About Me</h2>
                 <p>I am a results-driven Full Stack Developer from Nairobi, Kenya. Having completed my Software Engineering certification at Moringa School, I have a deep passion for problem-solving and UI/UX optimization.</p>
-                <a href="mailto:mohafathi24@gmail.com" class="contact-btn">CONTACT ME</a>
+                <a href="mailto:mohafathi24@gmail.com" class="contact-btn">Contact Me</a>
             </div>
         </div>
     </section>
 
+    <!-- TECH STACK -->
     <section class="tech-stack">
         <span class="sub-heading">Skills</span>
-        <h2 style="margin-bottom: 40px;">Technologies</h2>
+        <h2 class="section-title">Technologies</h2>
         <div class="tech-grid">
             <div class="tech-icon"><i class="fab fa-html5"></i><span>HTML</span></div>
             <div class="tech-icon"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
@@ -60,9 +75,10 @@
         </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services" class="services">
         <span class="sub-heading">What I do</span>
-        <h2>My Services</h2>
+        <h2 class="section-title">My Services</h2>
         <div class="service-grid">
             <div class="service-card">
                 <i class="fas fa-laptop-code"></i>
@@ -82,9 +98,10 @@
         </div>
     </section>
 
+    <!-- WORK -->
     <section id="work" class="work-section">
-        <span class="sub-heading" style="text-align: center; display: block;">Portfolio</span>
-        <h2 style="text-align: center;">My Work</h2>
+        <span class="sub-heading" style="text-align:center;display:block;">Portfolio</span>
+        <h2 class="section-title" style="text-align:center;">My Work</h2>
         <div class="project-grid">
 
             <div class="project-card">
@@ -93,7 +110,7 @@
                 <div class="tags">
                     <span>Flask</span><span>SQLAlchemy</span><span>PostgreSQL</span>
                 </div>
-                <a href="https://github.com/FathiMohamedBille/Ice-cream-shop" target="_blank" class="project-link" style="color: var(--primary); text-decoration: none; font-weight: 600; margin-top: auto;">View Project <i class="fas fa-arrow-right"></i></a>
+                <a href="https://github.com/FathiMohamedBille/Ice-cream-shop" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
 
             <div class="project-card">
@@ -102,7 +119,7 @@
                 <div class="tags">
                     <span>Python</span><span>PostgreSQL</span><span>Security</span>
                 </div>
-                <a href="https://github.com/FathiMohamedBille/Banking-System-Application" target="_blank" class="project-link" style="color: var(--primary); text-decoration: none; font-weight: 600; margin-top: auto;">View Project <i class="fas fa-arrow-right"></i></a>
+                <a href="https://github.com/FathiMohamedBille/Banking-System-Application" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
 
             <div class="project-card">
@@ -111,7 +128,7 @@
                 <div class="tags">
                     <span>JavaScript</span><span>API Integration</span><span>Mapping</span>
                 </div>
-                <a href="https://github.com/victorndungi/communicable-diseases-charity" target="_blank" class="project-link" style="color: var(--primary); text-decoration: none; font-weight: 600; margin-top: auto;">View Project <i class="fas fa-arrow-right"></i></a>
+                <a href="https://github.com/victorndungi/communicable-diseases-charity" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
 
             <div class="project-card">
@@ -120,21 +137,56 @@
                 <div class="tags">
                     <span>Frontend</span><span>Animations</span><span>UI/UX</span>
                 </div>
-                <a href="https://github.com/FathiMohamedBille/Bot-Battlr" target="_blank" class="project-link" style="color: var(--primary); text-decoration: none; font-weight: 600; margin-top: auto;">View Project <i class="fas fa-arrow-right"></i></a>
+                <a href="https://github.com/FathiMohamedBille/Bot-Battlr" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
 
         </div>
     </section>
 
+    <!-- FOOTER / CONTACT -->
     <footer id="contact">
         <h3>Let's Connect</h3>
         <div class="footer-socials">
-            <a href="http://linkedin.com/in/fathi-mohamed-53726a312" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/FathiMohamedBille" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:mohafathi24@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="http://linkedin.com/in/fathi-mohamed-53726a312" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/FathiMohamedBille"           target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:mohafathi24@gmail.com"                    aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
         <p>&copy; 2026 Fathi Mohamed Bille. All rights reserved.</p>
     </footer>
+
+    <script>
+        /* ── HAMBURGER ── */
+        var hamburger   = document.getElementById('hamburger');
+        var mobileMenu  = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function () {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+        });
+
+        function closeMenu() {
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+        }
+
+        /* ── SCROLL-TRIGGERED ANIMATIONS ──
+           Adds .visible to cards/icons as they enter the viewport.
+           Works on every device — no hover required.              */
+        (function () {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            document
+                .querySelectorAll('.service-card, .tech-icon, .project-card')
+                .forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
 
 </body>
 </html>
